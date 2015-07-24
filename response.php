@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <? include "_includes/head" ?>
-  <body>
-    <? include "_includes/header" ?>
+  <? include "_includes/head.php" ?>
+  <body class="view-response">
+    <? include "_includes/header.php" ?>
     <main>
       <div class="wrapper">
         <h1>Neato mosquito! Here&rsquo;s what we&rsquo;ve got</h1>
         <section class="files files-valid">
           <h1>[This/these] file[s] [is/are] <strong>valid</strong></h1>
-          <article>
+          <article class="file">
             <h1>appropriation.csv</h1>
           </article>
-          <article>
+          <article class="file">
             <h1>award_financial.csv</h1>
           </article>
         </section>

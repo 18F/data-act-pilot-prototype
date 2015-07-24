@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <? include "_includes/head" ?>
-  <body>
-    <? include "_includes/header" ?>
+  <? include "_includes/head.php" ?>
+  <body class="view-home">
+    <? include "_includes/header.php" ?>
     <main>
       <div class="wrapper">
         <h1>Data ACT Validator</h1>
-        <p>Use the form below to upload and validate your <a href="#">DATA Act files</a>. Once all four files are validated, you can submit them to Treasury.</p>
-        <form>
+        <p>Use the form below to upload and validate your <a href="#">DATA Act files</a></p>
+        <form action="response.php">
           <div class="field field-file">
             <label>
               <span class="label-text">appropriation.csv</span>
