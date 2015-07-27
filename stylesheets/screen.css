@@ -1,5 +1,7 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
 
+/* @override http://localhost:4000/stylesheets/screen.css */
+
 /* @group bootstrap */
 
 html { box-sizing: border-box; }
@@ -670,7 +672,7 @@ header.banner h1{
 	border-radius: 100%;
 	color: white;
 	position: absolute;
-	left: -48px;
+	left: -2.5em;
 	top: -4px;
 	z-index: 1;
 }
@@ -681,8 +683,7 @@ header.banner h1 a{ display: none; }
 
 body {
 	background: white;
-	padding: 16px;
-	padding-left: 40px;
+	padding: 1em;
 	border-radius: 8px;
 	margin: 2.5% auto;
 	max-width: 768px;
@@ -697,16 +698,15 @@ body::after {
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 30px;
+	width: 1em;
 	background: #fafafa;
 	border-radius: 7px 0 0 7px;
-	
 }
 
 main div.wrapper > h1{
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: 200;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 .view-home main div.wrapper p{
@@ -724,7 +724,8 @@ section.files > header > h1{
 	margin-bottom: 0.8em;
 }
 
-section.files > header > h1+p{
+section.files > header > h1 + p{
+	font-size: 0.875em;
 	margin-top: -0.4em;
 }
 
@@ -740,58 +741,65 @@ section.files > header > h1 strong{
 }
 
 
-article.file{ display: inline-block; }
-article.file > h1{
-	width: 96px;
-	padding: 9px;
-	padding-left: 6px;
-	text-align: center;
-	padding-top: 64px;
-	position: relative;
-	background: #fafafa;
-	border: 1px solid #eee;
-	border-radius: 4px;
-	padding-bottom: 10px;
-	font-size: 12px;
-	display: block;
-	overflow: hidden;
-	text-overflow: ellipsis;
+article.file{
+	margin-bottom: 0.5em;
 }
-
+article.file > h1{
+	padding-left: 1.5em;
+	position: relative;
+}
 article.file > h1::after{
 	content: "";
 	position: absolute;
-	top: 10px;
-	left: 50%;
-	margin-left: -22px;
-	width: 44px;
-	height: 44px;
+	top: 50%;
+	left: 0;
+	margin-top: -0.5em;
+	width: 1em;
+	height: 1em;
 	background: url(images/csv.png) center center no-repeat;
 	background-size: 100%;
-	opacity: 0.5;
+
 }
 
 article.file.file-with-errors{
-	padding-left: 112px;
-	display: block;
+	padding-left: 1.2em;
+	position: relative;
+}
+
+article.file.file-with-errors::after{
+	content: "";
+	position: absolute;
+	left: 0.4em;
+	top: 2em;
+	bottom: 0;
+	width: 0.2em;
+	background: #ddd;
 }
 
 article.file.file-with-errors > h1{
-	float: left;
-	margin-left: -112px;
+	margin-left: -1.2em;
+	margin-bottom: 0.8em;
 }
 
 article.file.file-with-errors article{
-	border-bottom: 1px solid #eee;
-	padding-bottom: 12px;
-	margin-bottom: 12px;
-	font-size: 14px;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 0.6em;
+	margin-bottom: 0.6em;
+	font-size: 0.875em;
 	line-height: 1.4em;
+}
+
+article.file.file-with-errors article:last-of-type{
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 article.file.file-with-errors article h1{
 	font-weight: 600;
+	margin-bottom: 0.2em;
 }
+
 article.file.file-with-errors article p{
 	margin-bottom: 0;
 }
@@ -815,36 +823,85 @@ div.field.field-file span.label-text{
 
 @media screen and (min-width: 33.33em){
 	body {
-		padding: 24px;
-		padding-left: 72px;
+		padding: 1.5em;
+		padding-left: 3em;
 		margin: 2em auto;
 		width: 90%;	
 	}
 	
-	body::after { width: 48px; }
+	body::after { width: 2.5em; }
 
 	header.banner h1{
-		width: 64px;
-		height: 64px;
-		left: -80px;
+		width: 3em;
+		height: 3em;
+		left: -4.125em;
 		z-index: 1;
 	}
 	
 	main div.wrapper > h1{
-		font-size: 36px;
+		font-size: 2.25em;
 		font-weight: 100;
-		margin-bottom: 0.8em;
 	}
 
 	div.field.field-file{
-			display: inline-block;
-			margin-bottom: 0.8em;
-			width: 48%;
-			min-width: 212px;
-		}
+		display: inline-block;
+		margin-bottom: 0.8em;
+		width: 48%;
+		min-width: 212px;
+	}
 
 	section.files > h1,
-	section.files > header > h1{
-	font-size: 20px;
+	section.files > header > h1{ font-size: 1.25em; }
+	
+	section.files > header > h1 + p{ font-size: 1em;}
+	
+	article.file{ display: inline-block; }
+	article.file > h1{
+		width: 8em;
+		padding: 9px;
+		padding-left: 6px;
+		text-align: center;
+		padding-top: 5.333em;
+		position: relative;
+		background: #fafafa;
+		border: 1px solid #eee;
+		border-radius: 4px;
+		padding-bottom: 10px;
+		font-size: 0.75em;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
+
+	article.file > h1::after{
+		content: "";
+		position: absolute;
+		top: 1.2em;
+		left: 50%;
+		margin-left: -22px;
+		width: 44px;
+		height: 44px;
+		background: url(images/csv.png) center center no-repeat;
+		background-size: 100%;
+		opacity: 0.5;
+	}
+	
+	article.file.file-with-errors{
+		padding-left: 7em;
+		display: block;
+	}
+	article.file.file-with-errors::after{
+		display: none;
+	}
+	
+	article.file.file-with-errors > h1{
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+	
+	article.file.file-with-errors article.error{
+	}
+
 }
